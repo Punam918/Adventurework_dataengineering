@@ -1,0 +1,64 @@
+resourcegroups - adventure
+Storage account name = adventure918  we can open it by writing adls
+inside storage account - bronze silver gold container create garni this 3 determines raw transformed haru
+datafactoryname = adventureddff
+pipeline - gittoraw
+
+then in data factory go to manage to create linkserice for http , gen2
+
+azuredatabrick - adbawproject name hae
+
+adbawproject
+Azure Databricks Service
+
+
+for databricks use standard d2v2
+
+data ingestion was done through data factory
+
+for databrick to access from raw data from azure data lake gen 2 we need a key
+
+so for key i write microsoft entra id and then manage and app registration and create new registration
+Then we need to store the id there to link it on databricks
+
+
+Application (client) ID
+bc09a582-efa1-4e7e-9f28-2c73915b1079
+
+Object ID
+7c1e5c77-4809-4efe-bbf7-bc4fec89fdfa
+
+Directory (tenant) ID
+1aca3bd3-94b0-4b91-856c-8272425436ac
+
+Then go to certificates and secrets
+
+secretvalue -kML8Q~JWbR_QkMk2Ug1NyEj1pOmFmwDnj_v5QaUK
+secretid -b593b065-6584-46ae-b1f4-bce2c31b6b26
+
+
+so for storage account to also support this we need to create application going through accesscontrol(IAM) and and role and search for storage blob data contributer
+
+and then we use databricks 
+and we save our file in parquet file
+
+
+
+engineer123$ for password in security for synapse creating resources in synapse.
+
+
+Synapse_Analytics = spark cluster + data factory + warehousing
+
+
+for synapse also we need to create key as like databricks in IAM(access control) and storage blob data container
+
+CREATE VIEW  gold.calender
+AS
+SELECT 
+    *
+FROM 
+    OPENROWSET
+        (
+            BULK 'https://adventure918.dfs.core.windows.net/silver/AdventureWorks_Calendar/',
+            FORMAT = 'PARQUET'
+        ) as QUER1
