@@ -169,8 +169,6 @@ This project demonstrates an end-to-end data engineering pipeline on Azure, usin
     - In Data tab, Create SQL database --> "Serverless" --> Database name: `aw_database` --> create
     - Now, In SQL Script, we can see the database we created. Select `aw_database` for the script to use.
         - Use `OPENROWSET` function to see the data from data lake
-        - Get URL of a folder from data lake using properties example: https://adventure918.blob.core.windows.net/silver/AdventureWorks_Calendar/
-        - Replace `blob` with `dfs`. So, result will be example: https://adventure918.dfs.core.windows.net/silver/AdventureWorks_Calendar/
         - Mention the above url in `OPENROWSET` to read data.
         - Example SQL query
             ```sql 
