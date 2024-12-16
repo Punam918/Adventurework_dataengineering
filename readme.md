@@ -51,7 +51,7 @@ This project demonstrates an end-to-end data engineering pipeline on Azure, usin
 #### Static Pipeline (To copy data from source to destination)
 
 - In Author tab: create a pipleine `GitToRaw`
-    - Drag "Copy Data" activity and name it as `CopyRawData`
+    - Drag "Copy data" activity and name it as `Copy data`
         - In "source" tab, create new data source `http` and file format as `csv` ---> Name: `ds_http`
             - Linked service: select `httplinkedservice`
             - Relative URL: `punam918/Adventure_works_Data_Engineering_Pipeline/refs/heads/main/Data/AdventureWorks_Products.csv`
@@ -68,8 +68,8 @@ This project demonstrates an end-to-end data engineering pipeline on Azure, usin
 
 #### Setup Dynamic Pipeline
 
-- In Author tab: create a pipleine `DynamicGitToRaw`
-    - Drag "Copy Data" activity and name it as `DynamicCopyRawData`
+- In Author tab: create a pipleine `dynamiccopy`
+    - Drag "Copy Data" activity and name it as `dynamiccopy`
         - In "source" tab, create new data source `http` and file format as `csv` ---> Name: `ds_http_dynamic`
             - Linked service: select `httplinkedservice`
             - In Advanced: Click on "Open this dataset"
@@ -84,20 +84,11 @@ This project demonstrates an end-to-end data engineering pipeline on Azure, usin
             - File name -> add dynamic content -> Create a new parameter `p_file_name` of `string` type
    
  
-    - Drag "ForEach" activity and name it as `ForEachGit`
-        - In settings tab, check the box Sequential
-        - Items: Add dynamic content --> select LookupGit value array --> OK
-    - Now, cut the `DynamicCopyRawData` activity --> select `ForEachGit` activity --> Inside activities tab --> click on pencil symbol --> (now we are inside foreach activity) paste `DynamicCopyRawData` activity
-    - Now, select Copy Data Activity
-        - Inside source tab --> `p_rel_url` Add dynamic content --> `@item().p_rel_url` (p_rel_url: parameter inside json file) --> OK
-        - Do the same for other two parameters accordingly in Sink tab
-- Now, click on "Debug" to run the pipeline. 
-- You can check that files will be present inside the data lake storage.
+
 
 ### Azure Databricks (Silver Layer)
 
 - **Create Azure Databricks Workspace**: `adbawproject`
-  - Pricing Tier: Trail (14 days Free)
   - Managed Resource group name: `managed-adb-aw-project`
   - Click Create
   - In compute Tab, click on + to create compute
