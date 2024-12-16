@@ -8,7 +8,7 @@ This project demonstrates an end-to-end data engineering pipeline on Azure, usin
 
 ## Architecture
 
-![Architecture Diagram](architecture.png)
+![Architecture Diagram](https://raw.githubusercontent.com/Punam918/Adventurework_dataengineering/refs/heads/master/Images/architecture.png)
 
 ## Tech Stack
 
@@ -62,7 +62,7 @@ This project demonstrates an end-to-end data engineering pipeline on Azure, usin
     - Click on "Debug" --> To run the pipeline
 - "Publish all"
 
-    ![Publish Pipeline](pipeline.png)
+    ![Publish Pipeline](https://raw.githubusercontent.com/Punam918/Adventurework_dataengineering/refs/heads/master/Images/pipeline.jpg)
 
 - since we have around 10 files we need to create 10 different pipelines. But this is not a standard approach. We should create a Dynamic pipeline.
 
@@ -122,6 +122,16 @@ This project demonstrates an end-to-end data engineering pipeline on Azure, usin
         - In top, connect to cluster `AWProjectCluster`
         - Now write a code for transformations and then write the transformed data into `silver` container of datalake storage `adventure918`
         - refer to `Scripts/silver_layer_transform.ipynb` file for code
+![alt text](https://raw.githubusercontent.com/Punam918/Adventurework_dataengineering/refs/heads/master/Images/suceed.jpg)
+
+
+- **Visualizatonindatabricks**
+![alt text](https://raw.githubusercontent.com/Punam918/Adventurework_dataengineering/refs/heads/master/Images/visualization.jpg)
+![alt text](https://raw.githubusercontent.com/Punam918/Adventurework_dataengineering/refs/heads/master/Images/Visualization2.jpg)
+
+
+
+
 
 ### Synapse Analytics  (For Gold Layer)
 
@@ -195,7 +205,7 @@ This project demonstrates an end-to-end data engineering pipeline on Azure, usin
     - Select `gold.extsales` table and load
 
 ### Sample Power BI report
-![alt text](pipeline.png)
+![alt text](https://raw.githubusercontent.com/Punam918/Adventurework_dataengineering/refs/heads/master/Images/dashboard.png)
     
 
 
