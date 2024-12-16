@@ -5,7 +5,7 @@ This project demonstrates an end-to-end data engineering pipeline on Azure, usin
 ## Data Source
 
 [Adventure Works Dataset on Kaggle](https://www.kaggle.com/datasets/ukveteran/adventure-works)
-[MyDatabrickFile](https://raw.githubusercontent.com/Punam918/Adventurework_dataengineering/refs/heads/master/silver_layer_transform.html)
+
 
 ## Architecture
 
