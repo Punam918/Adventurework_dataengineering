@@ -9,8 +9,7 @@ This project demonstrates an end-to-end data engineering pipeline on Azure, usin
 
 ## Architecture
 
-![Architecture Diagram]
-(https://raw.githubusercontent.com/Punam918/Adventurework_dataengineering/refs/heads/master/Images/Medallion%20Architecture.jpg)
+![Architecture Diagram](https://raw.githubusercontent.com/Punam918/Adventurework_dataengineering/refs/heads/master/Images/Medallion%20Architecture.jpg)
 
 
 ## Tech Stack
